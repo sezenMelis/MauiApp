@@ -1,0 +1,24 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.AddClientPage"
+             Title="Add Client">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Add New Client" 
+                   FontSize="24" 
+                   HorizontalOptions="Center" 
+                   Margin="0,10" />
+
+            <Entry x:Name="NameEntry" Placeholder="Name" />
+            <Entry x:Name="LastNameEntry" Placeholder="Last Name" />
+            <Entry x:Name="EmailEntry" Placeholder="Email" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
+            <Entry x:Name="ImageUrlEntry" Placeholder="Image Url"/>
+            
+
+            <!-- Save and Cancel Buttons -->
+            <Button Text="Save" BackgroundColor="Green" TextColor="White" Clicked="OnSaveClicked" />
+            <Button Text="Cancel" BackgroundColor="Red" TextColor="White" Clicked="OnCancelClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

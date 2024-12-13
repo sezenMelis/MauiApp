@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.EditClientPage"
+             Title="EditClientPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Edit Client Details" FontSize="24" HorizontalOptions="Center" Margin="0, 10" />
+
+            <Image x:Name="ClientImage" 
+                   Source="{Binding Image}" 
+                   WidthRequest="100" 
+                   HeightRequest="100" 
+                   Aspect="AspectFill" 
+                   BackgroundColor="LightGray"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" />
+
+            <!-- Change Image Button -->
+            <Button Text="Change Image" 
+                    BackgroundColor="Blue" 
+                    TextColor="White" 
+                    Clicked="OnChangeImageClicked" />
+            
+            <Entry x:Name="NameEntry" Placeholder="Name" Text="{Binding Name}" />
+            <Entry x:Name="LastNameEntry" Placeholder="Last Name" Text="{Binding LastName}" />
+            <Entry x:Name="EmailEntry" Placeholder="Email" Text="{Binding Email}" />
+
+            <Button Text="Save" BackgroundColor="Green" TextColor="White" Clicked="OnSaveClicked" />
+            <Button Text="Cancel" BackgroundColor="Red" TextColor="White" Clicked="OnCancelClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
